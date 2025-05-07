@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #1bfd07;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles with Animation */
+  header {
+    background: linear-gradient(to right, #000000, #444444);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: #1bfd07;
+    animation: headerLine 3s linear infinite;
+  }
+  
+  @keyframes headerLine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  nav ul li img {
+    transition: transform 0.3s ease;
+  }
+  
+  nav ul li img:hover {
+    transform: rotate(360deg);
+  }
+  
+  /* Divider Line */
+  
+  
+  /* Content Styles */
+  .d {
+    padding: 20px;
+  }
+  
+  .petro {
+    color: #1bfd07;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .nova-container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .nova-featured-box {
+    background-color: #302f2f;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .nova-featured-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .nova-side-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nova-text-box {
+    background-color: #302f2f;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .nova-text-box:hover {
+    background-color: #1bfd07;
+  }
+  
+  .nova-text-box:hover h2 {
+    color: #000000;
+  }
+  
+  .textor {
+    text-decoration: none;
+  }
+  
+  .textor h2 {
+    color: #1bfd07;
+    margin: 0;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  /* Footer Styles */
+  .rodape-direitos {
+    text-align: center;
+    padding: 20px;
+    color: #1bfd07;
+    font-size: 0.9rem;
+    margin-top: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nova-container-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    header {
+      padding: 15px;
+    }
+  
+    nav ul {
+      gap: 15px;
+    }
+  
+    .petro {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .login-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #302f2f;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(27, 253, 7, 0.2);
+    overflow: hidden;
+  }
+  
+  .login-box2 {
+    padding: 20px;
+  }
+  
+  /* Form Styles */
+  h2 {
+    color: #1bfd07;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 600;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  input, select {
+    background-color: #000000;
+    border: 1px solid #1bfd07;
+    color: #1bfd07;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input::placeholder {
+    color: #1bfd07;
+    opacity: 0.6;
+  }
+  
+  .login-btn {
+    background-color: #1bfd07;
+    color: #000000;
+    border: none;
+    padding: 12px 15px;
+    margin: 20px 0 10px 0;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #000000;
+    color: #1bfd07;
+    border: 1px solid #1bfd07;
+  }
+
+  .text-coloreta{
+    color: #ffffff;
+  }

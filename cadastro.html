@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Spotify</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <H1>CADASTRE-SE AGORA!</H1>
+        <div class="login-box">
+            <a href="login.html"><h1 class="spotify-logo">Isotify</h1></a>
+            <h2>Cadastre sua conta</h2>
+            <div class="dd">
+            <button class="fb-login-btn">
+                <img src="img/google.png" alt="" width="20px" height="20px">
+                Continuar com o Google
+            </button>
+            <br><br>
+            <button class="fb-login-btn">
+                <img src="img/facebook (2).png" alt="" width="20px" height="20px">
+                Continuar com o Facebook
+            </button>
+            <br><br>
+            <button class="fb-login-btn">
+                <img src="img/apple.png" alt=""width="20px" height="20px">
+                Continuar com o Apple
+            </button>
+            <br><br>
+            <button class="fb-login-btn">Continuar com o Telefone</button>
+        </div>
+            <br>     <br>
+            <div class="linha"></div>
+            <br><br>
+            <div class="login-container">
+            <form action="login.php" method="post">
+                <label for="">E-mail ou nome de usuário</label>
+                <br>
+                <input type="text" name="email" placeholder="nome de usuario" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <input type="password" name="password" placeholder="Confirmar Senha" required>
+                <button type="submit" class="login-btn">Entrar</button>
+                
+                <p class="signup-text">ja tem uma conta? <a href="#">fazer login</a>.</p>
+            </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

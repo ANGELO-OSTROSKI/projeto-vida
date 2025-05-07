@@ -43,8 +43,8 @@ $suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
         <div class="nova-side-boxes">
             <div class="nova-text-box"> <h2>METAS :ﾠﾠ<img src="IMG/natacao.png" alt="" height="38" width="38">ﾠ <img src="IMG/ciclismo.png" alt="" height="38" width="38">ﾠ<img src="IMG/correndo.png" alt="" height="40" width="40"></h2> </div>
             <div class="nova-text-box">  <a href="views/triatlon.php" class="textor"><h2> Triatlon/Ironman</h2></a></div>
-            <div class="nova-text-box"> <a href="views/html/index3.html" class="textor"><h2>Faculdade</h2></a></div>
-            <div class="nova-text-box"> <a href="views/html/index5.html" class="textor"><h2>Vida no exterior</h2></a></div>
+            <div class="nova-text-box"> <a href="views/faculdade.php" class="textor"><h2>Faculdade</h2></a></div>
+            <div class="nova-text-box"> <a href="views/vida_exterior.php" class="textor"><h2>Vida no exterior</h2></a></div>
         </div>
     </div>
 </div>

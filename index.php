@@ -55,7 +55,34 @@ switch ($action) {
             header("Location: index.php?action=login");
         }
         break;
-
+    case 'triatlon':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/triatlon.php';
+        } else {
+            header("Location: index.php?action=triatlon");
+        }
+        break;
+    case 'faculdade':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/faculdade.php';
+        } else {
+            header("Location: index.php?action=faculdade");
+        }
+        break;
+    case 'vida_exterior':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/vida_exterior.php';
+        } else {
+            header("Location: index.php?action=vida_exterior");
+        }
+        break;
+        case 'pernil':
+            if (isset($_COOKIE['user_id'])) {
+                include 'views/pernil.php';
+            } else {
+                header("Location: index.php?action=pernil");
+            }
+            break;
     case 'logout':
         session_destroy();
         header("Location: index.php?action=login");
@@ -67,6 +94,7 @@ switch ($action) {
             header("Location: index.php?action=perfil");
         }
         break;
+
     default:
         header("Location: index.php?action=login");
         break;

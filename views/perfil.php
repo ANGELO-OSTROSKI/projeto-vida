@@ -51,14 +51,15 @@ if(isset($_POST["operacao"])){
     <div class="login-container">   
         <div class="login-box2">
     <form method="POST">
-    <form method="POST">
   <h2>Quem Sou Eu?</h2>
 
   <!-- Dados Pessoais -->
   <h3>Dados Pessoais</h3>
-  <input name="nome" placeholder="Nome completo">
-  <input name="idade" placeholder="Idade">
-  <input name="sexo" placeholder="Sexo">
+<input name="nome" placeholder="Nome">
+<textarea name="texto" placeholder="Digite o texto da música..."></textarea>
+<input type="texto" name="assunto" placeholder="Digite o assunto da música">
+<input name="idade" placeholder="Idade">
+<input name="sexo" placeholder="Sexo">
 
   <!-- Fale sobre você -->
   <h3>Fale sobre você</h3>

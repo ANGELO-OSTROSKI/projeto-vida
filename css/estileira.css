@@ -227,3 +227,56 @@ body {
   .text-coloreta{
     color: #ffffff;
   }
+  .pernillogin-container6 {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: rgb(70, 69, 69);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pernillogin-container6 h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pernillogin-container6 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pernillogin-container6 label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.pernillogin-container6 input[type="text"],
+.pernillogin-container6 textarea,
+.pernillogin-container6 input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.pernillogin-container6 textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.pernillogin-container6 button {
+    padding: 12px;
+    background-color: #2df106;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pernillogin-container6 button:hover {
+    background-color: #000301;
+}

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engenharia Civil Pro</title>
-    <link rel="stylesheet" href="../css/estileira.css">
+    <link rel="stylesheet" href="css/estileira.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../IMG/ChatGPT_Image_11_de_abr._de_2025__13_55_31-removebg-preview.png" height="170" width="245px" alt="Ispotify">
-            <a href="../index.php?action=home"></a>
+            <img src="IMG/ChatGPT_Image_11_de_abr._de_2025__13_55_31-removebg-preview.png" height="170" width="245px" alt="Ispotify">
+            <a href="index.php?action=home"></a>
         </div>
         <nav>
             <ul>
-            <li> <a href="index.php?action=home"><img src="../IMG\voltar.png" alt="" height="58" width="58"></a></li>
-            <li> <a href="index.php?action=home"><img src="../IMG\stickman.png" alt="" height="58" width="58"></a></li>
-            <li> <a href="index.php?action=logout"><img src="../IMG\saida.png" alt="" height="58" width="58"></a></li>
+            <li> <a href="index.php?action=home"><img src="IMG\voltar.png" alt="" height="58" width="58"></a></li>
+            <li> <a href="index.php?action=home"><img src="IMG\stickman.png" alt="" height="58" width="58"></a></li>
+            <li> <a href="index.php?action=logout"><img src="IMG\saida.png" alt="" height="58" width="58"></a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +27,7 @@
 
         <div class="nova-container-grid">
             <div class="nova-featured-box">
-                <img src="../IMG/engenheiro.jpg" alt="Engenharia Civil" height="640" width="580">
+                <img src="IMG/engenheiro.jpg" alt="Engenharia Civil" height="640" width="580">
                 <p class="text-coloreta"> PLANEJE, PROJETE E CONSTRUA COM EXCELÊNCIA E TECNOLOGIA.</p>
             </div>
 

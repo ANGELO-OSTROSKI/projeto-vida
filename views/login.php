@@ -9,9 +9,6 @@
 </head>
 <body>
 <div class="main">
-    <div class="img">
-        <img src="IMG/angelo-bike.jpg" alt="" width="780px" height="850px">
-    </div>
     <div class="login-container6">   
         <div class="login-box">
             <h1 class="spotify-logo">Entrar</h1>

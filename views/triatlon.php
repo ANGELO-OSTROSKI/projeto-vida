@@ -1,21 +1,29 @@
+<?php
+require_once 'config/Database.php';
+require_once 'controllers/MusicController.php';
 
+$controller = new MusicController($pdo);
+
+$musicas = $controller->listarMusicas();
+$suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triatlo Pro</title>
-    <link rel="stylesheet" href="../css/estileira.css"> <!-- usei o CSS do primeiro código -->
+    <link rel="stylesheet" href="css/estileira.css"> <!-- usei o CSS do primeiro código -->
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../IMG/ChatGPT_Image_11_de_abr._de_2025__13_55_31-removebg-preview.png" height="170" width="245px" alt="Ispotify">
-            <a href="../index.php?action=home"></a>
+            <img src="IMG/ChatGPT_Image_11_de_abr._de_2025__13_55_31-removebg-preview.png" height="170" width="245px" alt="Ispotify">
+            <a href="index.php?action=home"></a>
         </div>
         <nav>
             <ul>
-                <li> <a href="index.php?action=home"><img src="../IMG\voltar.png" alt="" height="58" width="58"></a></li>
                 <li> <a href="index.php?action=home"><img src="IMG\voltar.png" alt="" height="58" width="58"></a></li>
                 <li> <a href="index.php?action=home"><img src="IMG\stickman.png" alt="" height="58" width="58"></a></li>
                 <li> <a href="index.php?action=logout"><img src="IMG\saida.png" alt="" height="58" width="58"></a></li>
@@ -29,16 +37,16 @@
 
         <div class="nova-container-grid">
             <div class="nova-featured-box">
-                <img src="../IMG/image.png" alt="Triatlo" height="640" width="580">
+                <img src="IMG/image.png" alt="Triatlo" height="640" width="580">
                 <p class="text-coloreta"> TREINE PARA NADAR, PEDALAR E CORRER COMO UM CAMPEÃO.</p>
             </div>
 
             <div class="nova-side-boxes">
                 <div class="nova-text-box">
                     <h2>MODALIDADES :ﾠﾠ
-                        <img src="../IMG/natacao.png" alt="" height="38" width="38">ﾠ
-                        <img src="../IMG/ciclismo.png" alt="" height="38" width="38">ﾠ
-                        <img src="../IMG/correndo.png" alt="" height="40" width="40">
+                        <img src="IMG/natacao.png" alt="" height="38" width="38">ﾠ
+                        <img src="IMG/ciclismo.png" alt="" height="38" width="38">ﾠ
+                        <img src="IMG/correndo.png" alt="" height="40" width="40">
                     </h2>
                 </div>
 

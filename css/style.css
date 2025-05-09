@@ -1,31 +1,22 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #1bfd07;
-    height: 100vh;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:
+              url('../IMG/fundo.jpg'); /* substitua pelo nome da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #1bfd07;
+  height: 100vh;
+}
   .main {
     display: flex;
     height: 100vh;
   }
   
-  /* Image Section */
-  .img {
-    background-image: url('IMG/ANGELOBAIHA.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 50%; /* ou o tamanho que você quiser */
-    height: 100vh;
-    flex: 1;
-    background: linear-gradient(to right, #000000, #1a1a1a);
-    position: relative;
-    overflow: hidden;
-  }
-  
+
   .img::after {
     
     content: '';
@@ -86,6 +77,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
   }
   
   input {
@@ -162,6 +154,23 @@ body {
     }
   }
  
-  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #a0ff00; /* Verde neon para botão */
+    color: #1e1e1e; /* Texto preto */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-  
+button:hover {
+    background-color: #80ff00; /* Verde neon um pouco mais claro no hover */
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+
+}

@@ -29,12 +29,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Senha</title>
-    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<div class="main">
     
-    <form method="POST">
+    <div class="login-container6">
+    <div class="login-box">
+         <form method="POST">
         <h2>Alterar Senha</h2>
         <label for="email">E-mail cadastrado:</label>
         <input type="email" id="email" name="email" required>
@@ -43,7 +46,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="password" id="new_password" name="new_password" required>
 
         <button type="submit">Alterar Senha</button>
-    </form>
+   </form>
+ </div>
+ </div>
+ </div>
+    
 </body>
 
 </html>

@@ -8,10 +8,12 @@
 </head>
 <body>
 <div class="main">
-    <div class="img">
-    </div>
-            <div class="login-container">
+    
+    
+            <div class="login-container6">
+                
                 <div class="login-box">
+                    <h2>CADASTRE-SE AGORA MESMO</h2>
             <form action="index.php?action=register" method="post">
                 <input type="text" name="nome" placeholder="nome de usuario" required>
                 <input type="text" name="email" placeholder="email" required>

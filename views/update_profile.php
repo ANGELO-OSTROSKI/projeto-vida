@@ -32,14 +32,25 @@ if (isset($_FILES['foto_perfil']) && $_FILES['foto_perfil']['error'] === UPLOAD_
 
 // Atualiza os dados no banco de dados
 if ($fotoPath) {
-    $stmt = $pdo->prepare("UPDATE artigos SET nome = ?, sobre_mim = ? WHERE id_user = ?");
-    $stmt->execute([$nome, $sobre_mim, $userId]);
+    
     $stmt = $pdo->prepare("UPDATE usuarios SET foto_perfil = ? WHERE id_user = ?");
     $stmt->execute([$fotoPath, $userId]);
     
 } else {
     $stmt = $pdo->prepare("UPDATE artigos SET nome = ?, sobre_mim = ? WHERE id_user = ?");
     $stmt->execute([$nome, $sobre_mim, $userId]);
+    
+    $stmt = $pdo->prepare("SELECT * FROM artigos WHERE id_user = ?");
+    $stmt->execute([$userId]);
+    $artigo = $stmt->fetchAll();
+    
+    if(!empty($artigo)){
+        $stmt = $pdo->prepare("UPDATE artigos SET nome = ?, sobre_mim = ? WHERE id_user = ?");
+        $stmt->execute([$nome, $sobre_mim, $userId]);    
+    }else{
+        $stmt = $pdo->prepare("INSERT INTO artigos (nome, sobre_mim, id_user) VALUES (?,?,?)");
+        $stmt->execute([$nome, $sobre_mim, $userId]);
+    }
 }
 
 // Redireciona de volta ao perfil

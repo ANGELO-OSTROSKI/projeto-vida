@@ -12,6 +12,13 @@ $stmt = $pdo->prepare("SELECT * FROM artigos WHERE id_user = ?");
 $stmt->execute([$_COOKIE["user_id"]]);
 $artigo = $stmt->fetch();
 
+if($artigo == false){
+    $artigo = [
+        'sobre_mim' => '',
+        'nome' => ''
+    ];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +36,9 @@ $artigo = $stmt->fetch();
     </div>
     <nav>
         <ul>
+            <li> <a href="index.php?action=home"><img src="IMG\voltar.png" alt="" height="58" width="58"></a></li>
             <li><a href="index.php?action=perfil"><img src="IMG/QUIZ.png" alt="" height="58" width="58"></a></li>
             <li><a href="index.php?action=perfil"><img src="IMG/stickman.png" alt="" height="58" width="58"></a></li>
-            <li><a href="index.php?action=pernil"><img src="IMG/profile.png" alt="" height="58" width="58"></a></li>
             <li><a href="index.php?action=logout"><img src="IMG/saida.png" alt="" height="58" width="58"></a></li>
         </ul>    
     </nav>

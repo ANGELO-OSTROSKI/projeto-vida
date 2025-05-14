@@ -29,7 +29,7 @@ $suasmusicas = $controller->listarMusicasPorUserId($_COOKIE['user_id']);
             <ul>
                 <li> <a href="index.php?action=perfil"><img src="IMG\QUIZ.png" alt="" height="58" width="58"></a></li>
                 <li> <a href="index.php?action=perfil"><img src="IMG\stickman.png" alt="" height="58" width="58"></a></li>
-                <li> <a href="index.php?action=pernil"><img src="IMG\profile.png" alt="" height="58" width="58"></a></li>
+                <li> <a href="index.php?action=pernil"><img src="IMG\user.png" alt="" height="58" width="58"></a></li>
                 <li> <a href="index.php?action=logout"><img src="IMG\saida.png" alt="" height="58" width="58"></a></li>
             </ul>    
         </nav>

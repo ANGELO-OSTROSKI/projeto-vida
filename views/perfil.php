@@ -30,7 +30,7 @@ if(isset($_POST["operacao"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estileira.css">
-    <title>Spotify - Página Inicial</title>
+    <title>quem sou eu - Página Inicial</title>
 </head>
 <body>
   

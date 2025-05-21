@@ -94,9 +94,16 @@ switch ($action) {
             header("Location: index.php?action=perfil");
         }
         break;
-
+    case 'quiz':
+        if (isset($_COOKIE['user_id'])) {
+            include 'views/quiz.php';
+        } else {
+            header("Location: index.php?action=quiz");
+        }
+        break;
     default:
         header("Location: index.php?action=login");
         break;
 }
 ?>
+

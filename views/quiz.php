@@ -1,5 +1,7 @@
 <?php
-include 'inc/db.php';
+include __DIR__ . '/../quiz/inc/db.php';
+include __DIR__ . '/../quiz/inc/formula.php';
+
 //-- consulta dados do banco
 $sql = 'SELECT * FROM tbl_personalities ORDER BY no ASC';
 $result = $db->query($sql);
@@ -27,22 +29,23 @@ foreach ($x as $dt) {
   <meta http-equiv="expires" content="<?php echo date('r'); ?>" />
   <meta http-equiv="pragma" content="no-cache" />
   <meta http-equiv="cache-control" content="no-cache" />
-  <link rel='stylesheet' href='css/disc.css?<?php echo md5(date('r')); ?>' />
+  <link rel='stylesheet' href='quiz/css/disc.css?<?php echo md5(date('r')); ?>' />
 </head>
 
 <body>
   <header>
     <h1> Teste de Personalidade </h1>
 
-      <nav>
+    <nav>
             <ul>
-                <li> <a href="../index.php?action=perfil"><img src="../IMG\QUIZ.png" alt="" height="58" width="58"></a></li>
-                <li> <a href="../index.php?action=perfil"><img src="../IMG\stickman.png" alt="" height="58" width="58"></a></li>
-                <li> <a href="../index.php?action=pernil"><img src="../IMG\user.png" alt="" height="58" width="58"></a></li>
-                <li> <a href="../index.php?action=logout"><img src="../IMG\saida.png" alt="" height="58" width="58"></a></li>
+               <li> <a href="index.php?action=home"><img src="IMG\voltar.png" alt="" height="58" width="58"></a></li>
+                <li> <a href="index.php?action=perfil"><img src="IMG\stickman.png" alt="" height="58" width="58"></a></li>
+                <li> <a href="index.php?action=pernil"><img src="IMG\user.png" alt="" height="58" width="58"></a></li>
+                <li> <a href="index.php?action=logout"><img src="IMG\saida.png" alt="" height="58" width="58"></a></li>
             </ul>    
         </nav>
   </header>
+
   <div id='container'>
     <div class='info-box'>
       <b>INSTRUÇÕES</b>: Cada número abaixo contém 4 (quatro) frases. Sua tarefa é: <br />
@@ -53,7 +56,8 @@ foreach ($x as $dt) {
       <br />
       <b>ATENÇÃO</b>: Em cada número deve haver apenas <u>uma marcação</u> na coluna Mais (✓) e <u>uma</u> na coluna Menos (✗).
     </div>
-    <form method='post' action='result.php'>
+
+    <form method='post' action='../quiz/result.php'>
       <table>
         <thead>
           <tr>
@@ -74,29 +78,18 @@ foreach ($x as $dt) {
                 if ($j > 0 && $n == 0) {
                   echo "<tr" . ($i % 2 == 0 ? " class='dark'" : "") . ">";
                 } elseif ($j == 0) {
-                  echo "<th rowspan='4'"
-                    . ($j == 0 ? " class='first'" : "") . ">"
-                    . ($i + $n * 8 + 1)
-                    . "</th>";
+                  echo "<th rowspan='4'" . ($j == 0 ? " class='first'" : "") . ">" . ($i + $n * 8 + 1) . "</th>";
                 }
+
                 $no = $n * 8 + $i * 4 + $j + (24 * $n);
-                echo "<td" . ($j == 0 ? " class='first'" : "") . ">
-                    {$data[$no]->term}
-                  </td>
-                  <td" . ($j == 0 ? " class='first'" : "") . ">
-                    <input type='radio' 
-                           name='m[" . ($i + $n * 8) . "]' 
-                           value='{$data[$no]->most}' 
-                           aria-label='Mais' 
-                           required /> ✓
-                  </td>
-                  <td" . ($j == 0 ? " class='first'" : "") . ">
-                    <input type='radio' 
-                           name='l[" . ($i + $n * 8) . "]' 
-                           value='{$data[$no]->least}' 
-                           aria-label='Menos' 
-                           required /> ✗
-                  </td>";
+
+                echo "<td" . ($j == 0 ? " class='first'" : "") . ">{$data[$no]->term}</td>
+                      <td" . ($j == 0 ? " class='first'" : "") . ">
+                        <input type='radio' name='m[" . ($i + $n * 8) . "]' value='{$data[$no]->most}' aria-label='Mais' required /> ✓
+                      </td>
+                      <td" . ($j == 0 ? " class='first'" : "") . ">
+                        <input type='radio' name='l[" . ($i + $n * 8) . "]' value='{$data[$no]->least}' aria-label='Menos' required /> ✗
+                      </td>";
               }
               echo "</tr>";
             }
@@ -113,6 +106,7 @@ foreach ($x as $dt) {
       </table>
     </form>
   </div>
+
   <footer>
     copyright &copy; 2016<?php echo (date('Y') > 2016 ? '-' . date('Y') : ''); ?> por
     <a href='mailto:cahyadsn@gmail.com'>cahya dsn</a>

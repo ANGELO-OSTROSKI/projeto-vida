@@ -32,7 +32,7 @@ foreach ($x as $dt) {
 
 <body>
   <header>
-    <h1> Teste de Personalidade DISC</h1>
+    <h1> Teste de Personalidade </h1>
 
       <nav>
             <ul>
